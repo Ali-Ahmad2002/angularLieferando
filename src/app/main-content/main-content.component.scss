@@ -1,0 +1,81 @@
+.headContainer {
+}
+
+.headImg {
+    background-image: url("../../assets/img/pizza-g69790c6c2_1280.jpg");
+    width: calc(100% - 350px);
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+}
+
+.theLogo {
+    width: calc(100% - 350px);
+    height: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childCon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.childImg {
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #80808085;
+    border-radius: 100%;
+    background: white;
+    img {
+        height: 65px;
+    }
+}
+
+.menuContent {
+    width: calc(100% - 350px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 2rem;
+    h2 {
+        padding-left: 7rem;
+    }
+    div {
+        padding-right: 7rem;
+        img {
+            height: 40px;
+        }
+    }
+}
+
+.menuCategory {
+    height: 60px;
+    width: calc(100% - 350px);
+    background-color: #f5deb333;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        margin-right: 7rem;
+        font-size: 22px;
+    }
+    div {
+        span {
+            padding-right: 3rem;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+}
+
+.foodBoxes {
+    
+}

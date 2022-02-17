@@ -1,0 +1,37 @@
+<div class="headContainer">
+    <div class="headImg"></div>
+
+    <div class="theLogo">
+        <div class="childCon">
+            <div class="childImg">
+                <img src="assets/img/logo_465x320.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="menuContent">
+        <h2>Pizza restaurant</h2>
+        <div>
+            <img src="assets/img/ic_empty_fav.svg">
+        </div>
+    </div>
+
+    <div class="menuCategory">
+        <h3>Beliebte Gerichte:</h3>
+        <div>
+            <span (click)="showFood('pizza')">Pizza</span>
+            <span (click)="showFood('burger')">Burger</span>
+            <span (click)="showFood('pasta')">Pasta</span>
+            <span (click)="showFood('salate')">Salate</span>
+        </div>
+    </div>
+
+    <div class="foodBoxes">
+        <div *ngFor="let food of theArrays.foods; let i=index">
+            <h2>{{food.name}}</h2>
+            <p>{{food.text}}</p>
+            <span>{{food.price}}</span>
+        </div>
+    </div>
+
+</div>
