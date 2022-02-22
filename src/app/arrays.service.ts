@@ -5,6 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class ArraysService {
 
+  foodsInBasket: any = [];
+
   foods: any = [
     {
       name: 'Pizza Margherita',
@@ -31,7 +33,7 @@ export class ArraysService {
       name: 'Hamburger',
       text: 'Pattie mit ketchup',
       price: 3.5,
-      category: 'pizza',
+      category: 'burger',
       amount: 0
     },
 
@@ -39,45 +41,47 @@ export class ArraysService {
       name: 'Cheeseburger',
       text: 'Mit Käse und ketchup',
       price: 4.2,
-      category: 'pizza',
+      category: 'burger',
       amount: 0
     },
     {
       name: 'Double beef Burger',
       text: 'Mit Käse und 2 Patties',
       price: 5,
-      category: 'pizza',
+      category: 'burger',
       amount: 0
     },
     {
       name: 'Spaghetti Carbonara',
       text: 'Mit Sahne und Hühnchenbrust',
       price: 7.5,
-      category: 'pizza',
+      category: 'pasta',
       amount: 0
     },
     {
       name: 'Spaghetti Bolognese',
       text: 'Mit Rinderhack und Parmesan',
       price: 6.5,
-      category: 'pizza',
+      category: 'pasta',
       amount: 0
     },
     {
       name: 'Chicken Salat',
       text: 'Mit Hühnchenbrust und Feta Käse',
       price: 3.5,
-      category: 'pizza',
+      category: 'salate',
       amount: 0
     },
     {
       name: 'Vegan Salat',
       text: 'Mit Avocado und viel Gemüse',
       price: 2.5,
-      category: 'pizza',
+      category: 'salate',
       amount: 0
     },
   ];
+
+  filteredFood = this.foods;
 
   constructor() { }
 }

@@ -19,6 +19,7 @@
     <div class="menuCategory">
         <h3>Beliebte Gerichte:</h3>
         <div>
+            <span (click)="showFood('all')">Alle</span>
             <span (click)="showFood('pizza')">Pizza</span>
             <span (click)="showFood('burger')">Burger</span>
             <span (click)="showFood('pasta')">Pasta</span>
@@ -27,10 +28,11 @@
     </div>
 
     <div class="foodBoxes">
-        <div *ngFor="let food of theArrays.foods; let i=index">
+        <div class="foodBoxChild" *ngFor="let food of arrays.filteredFood;">
             <h2>{{food.name}}</h2>
             <p>{{food.text}}</p>
             <span>{{food.price}}</span>
+            <img (click)="addToBasket(food)" src="assets/img/plus-2-48.png">
         </div>
     </div>
 

@@ -8,6 +8,12 @@
     box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 5px 0px;
 }
 
+.placeholderItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .basketHead {
     height: 55px;
     display: flex;

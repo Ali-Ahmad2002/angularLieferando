@@ -77,5 +77,24 @@
 }
 
 .foodBoxes {
-    
+    width: calc(100% - 350px);
+}
+.foodBoxChild {
+    position: relative;
+    border: 1px solid black;
+    margin-left: 8rem;
+    margin-right: 8rem;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    border-radius: 7px;
+    img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+        height: 40px;
+        padding: 5px;
+        cursor: pointer;
+    }
 }

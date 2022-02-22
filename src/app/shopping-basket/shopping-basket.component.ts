@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ArraysService } from '../arrays.service';
 
 @Component({
   selector: 'app-shopping-basket',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShoppingBasketComponent implements OnInit {
 
-  constructor() { }
+  constructor(public arrays: ArraysService) { }
 
   ngOnInit(): void {
+    console.log('basket', this.arrays.foodsInBasket);
   }
+
+  // scrollFunction() {
+  //   window.onscroll = function () {
+  //     if (window.scrollY > 0) {
+  //     }
+  //   }
+  // }
 
 }

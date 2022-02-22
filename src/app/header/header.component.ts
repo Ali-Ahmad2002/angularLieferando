@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+
 
 @Component({
   selector: 'app-header',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  // @Input() title! : string;
+  // @Output() titleChange = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit(): void {
   }
+
+  // handleTitleChange(input: HTMLInputElement){
+  //     this.titleChange.emit(input.value);
+  //     input.value = "";
+  // }
 
 }

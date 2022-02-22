@@ -4,9 +4,15 @@
     </div>
 
     <div class="basketItems">
-        <img src="assets/img/shopping_basket_black_24dp.svg">
-        <span>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+        <div *ngFor="let food of arrays.foodsInBasket">
+            <div class="placeholderItem">
+                <img src="assets/img/shopping_basket_black_24dp.svg">
+                <span>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+            </div>
+            <h2>{{food.name}}</h2>
+        </div>
     </div>
+
 
     <div class="basketPrice">
         <div>
