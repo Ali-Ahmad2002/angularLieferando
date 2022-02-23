@@ -68,12 +68,16 @@
     }
     div {
         span {
-            padding-right: 3rem;
+            margin-right: 3rem;
             font-size: 20px;
             font-weight: 600;
             cursor: pointer;
         }
     }
+}
+
+.borderActive {
+    border-bottom: 2px solid black !important;
 }
 
 .foodBoxes {

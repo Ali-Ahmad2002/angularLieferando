@@ -1,27 +1,30 @@
-<div (scroll)="onScroll($event)" class="mainContainer">
+<div (scroll)="onScroll($event, cart)" class="mainContainer" #cart>
     <div class="basketHead">
         <span>Warenkorb</span>
     </div>
 
     <div class="basketItems">
-        <div *ngFor="let food of arrays.foodsInBasket">
-            <div class="placeholderItem">
-                <img src="assets/img/shopping_basket_black_24dp.svg">
-                <span>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
-            </div>
+
+        <div [class.d-none]="activeFood" class="placeholderItem">
+            <img src="assets/img/shopping_basket_black_24dp.svg">
+            <span>Wähle leckere Gerichte aus der Karte und bestelle dein Menü.</span>
+        </div>
+        <div class="foodItems" *ngFor="let food of arrays.foodsInBasket; let i=index">
             <h2>{{food.name}}</h2>
+            <span class="amountPlace"> <button (click)="addAmount(i)">+</button> <button
+                    (click)="lowerAmount(i)">-</button>{{food.amount}}x</span>
+            <p class="pricePlace">{{ food.price * food.amount }}€</p>
         </div>
     </div>
-
 
     <div class="basketPrice">
         <div>
             <span>Zwischensumme</span>
-            <span>€</span>
+            <span> xxx €</span>
         </div>
         <div>
             <span>Versand</span>
-            <span>€</span>
+            <span> {{1}} €</span>
         </div>
         <div>
             <span style="font-weight: bold;">Gesamtpreis</span>

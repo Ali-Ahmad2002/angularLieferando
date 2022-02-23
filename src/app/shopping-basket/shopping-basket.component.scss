@@ -14,6 +14,22 @@
     align-items: center;
 }
 
+.d-none {
+    display: none !important;
+}
+
+.foodItems {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    h2 {
+        padding-left: 10px;
+    }
+}
+
 .basketHead {
     height: 55px;
     display: flex;
@@ -29,13 +45,30 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     span {
         text-align: center;
-        padding-top: 15px;
+        // padding-top: 15px;
         padding-left: 10px;
         padding-right: 10px;
     }
+}
+
+.amountPlace {
+    display: flex;
+    align-items: center;
+    width: 30%;
+    justify-content: space-around;
+    button {
+        cursor: pointer;
+    }
+}
+
+.pricePlace {
+    padding-right: 10px;
+    width: 20%;
+    text-align: end;
 }
 
 .basketPrice {

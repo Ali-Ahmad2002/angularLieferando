@@ -19,20 +19,20 @@
     <div class="menuCategory">
         <h3>Beliebte Gerichte:</h3>
         <div>
-            <span (click)="showFood('all')">Alle</span>
-            <span (click)="showFood('pizza')">Pizza</span>
-            <span (click)="showFood('burger')">Burger</span>
-            <span (click)="showFood('pasta')">Pasta</span>
-            <span (click)="showFood('salate')">Salate</span>
+            <span [class.borderActive]="activeBtn" (click)="showFood('all')">Alle</span>
+            <span [class.borderActive]="activeBtn" (click)="showFood('pizza')">Pizza</span>
+            <span [class.borderActive]="activeBtn" (click)="showFood('burger')">Burger</span>
+            <span [class.borderActive]="activeBtn" (click)="showFood('pasta')">Pasta</span>
+            <span [class.borderActive]="activeBtn" (click)="showFood('salate')">Salate</span>
         </div>
     </div>
 
     <div class="foodBoxes">
-        <div class="foodBoxChild" *ngFor="let food of arrays.filteredFood;">
+        <div class="foodBoxChild" *ngFor="let food of arrays.filteredFood; let i=index">
             <h2>{{food.name}}</h2>
             <p>{{food.text}}</p>
             <span>{{food.price}}</span>
-            <img (click)="addToBasket(food)" src="assets/img/plus-2-48.png">
+            <img (click)="addToBasket(i)" src="assets/img/plus-2-48.png">
         </div>
     </div>
 
