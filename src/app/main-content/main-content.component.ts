@@ -14,8 +14,6 @@ export class MainContentComponent implements OnInit {
    
   }
 
- 
-
   showFood(category: string) {
     if (category !== 'all') {
       console.log(category);
